@@ -15,7 +15,7 @@ DirProb.m            |
 Dist3D.m             | 
 dms2deg.m            | 
 dms2rad.m            | 
-doy2jd.m             | 
+doy2jd.m             | Completed
 ecef2lla.m           | 
 ell2utm.m            | 
 ell2xyz.m            | 
@@ -57,18 +57,16 @@ xyz2ell.m            | Completed
 xyz2ell2.m           | Completed
 xyz2ell3.m           | Completed
 xyz2sph.m            | Completed
-yr2jd.m              | 
+yr2jd.m              | Completed
 ```
 
-Limitations:
-    No vector wise multiplication
-
+Limitations:  
+    No vector wise multiplication  
+  
 Ideas:
-[]Could link multiple files to an import : https://www.reddit.com/r/learnpython/comments/5odyok/one_function_per_file/
+[] Could link multiple files to an import : https://www.reddit.com/r/learnpython/comments/5odyok/one_function_per_file/
 
-[]Group into :
-    Time
-    Co-ordinate conversion
+[ ] Group into 1) Time and 2) Co-ordinate conversion
 
 ```
 Module_name
