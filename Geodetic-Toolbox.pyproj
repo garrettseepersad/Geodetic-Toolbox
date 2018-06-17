@@ -18,5 +18,31 @@
   <PropertyGroup>
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="cal2jd.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="README.md">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="yr2jd.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="xyz2sph.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="xyz2ell3.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="xyz2ell2.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="xyz2ell.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>
