@@ -22,6 +22,18 @@
     <Compile Include="cal2jd.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="doy2jd.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gps2jd.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ell2xyz.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sph2xyz.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="README.md">
       <SubType>Code</SubType>
     </Compile>
