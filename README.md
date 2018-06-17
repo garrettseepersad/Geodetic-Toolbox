@@ -13,9 +13,9 @@
   
 ###### Coordinate Conversions  
 - [ ] ell2utm   - Ellipsoidal (lat,long) to UTM (N,E) coordinates  
-- [ ] ell2xyz   - Ellipsoidal (lat,long) to Cartesian (x,y,z) coodinates  
-- [ ] sph2xyz   - Shperical (az,va,dist) to Cartesian (x,y,z) coordinates  
-- [ ] xyz2sph   - Cartesian (x,y,z) to spherical (az,va,dist) coordinates  
+- [x] ell2xyz   - Ellipsoidal (lat,long) to Cartesian (x,y,z) coodinates  
+- [x] sph2xyz   - Shperical (az,va,dist) to Cartesian (x,y,z) coordinates  
+- [x] xyz2sph   - Cartesian (x,y,z) to spherical (az,va,dist) coordinates  
 - [x] xyz2ell   - Cartesian (x,y,z) to ellipsoidal (lat,long,ht) coordinates  
 - [x] xyz2ell2  - xyz2ell with Bowring height formula  
 - [x] xyz2ell3  - xyz2ell using complete Bowring version  
