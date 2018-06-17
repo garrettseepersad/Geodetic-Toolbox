@@ -1,3 +1,4 @@
+```
 Filename             | Remarks
 _____________________________________
 cal2jd.m             | 
@@ -57,22 +58,24 @@ xyz2ell2.m           | Completed
 xyz2ell3.m           | Completed
 xyz2sph.m            | Completed
 yr2jd.m              | 
+```
 
 Limitations:
     No vector wise multiplication
 
 Ideas:
-    Could link multiple files to an import
-https://www.reddit.com/r/learnpython/comments/5odyok/one_function_per_file/
+[]Could link multiple files to an import : https://www.reddit.com/r/learnpython/comments/5odyok/one_function_per_file/
 
+[]Group into :
+    Time
+    Co-ordinate conversion
+
+```
 Module_name
 | - module_name
 | | - __init__.py
   | - some_func.py
   | - some_func2.py
 | - setup.py
+```
 
-
-Group into :
-    Time
-    Co-ordinate conversion
