@@ -1,4 +1,7 @@
 import numpy
+import sys
+from cal2jd import cal2jd
+from doy2jd import doy2jd
 
 def yr2jd(yr):
 #% YR2JD  Converts year and decimal of year to Julian date.
