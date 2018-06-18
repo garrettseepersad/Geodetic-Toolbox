@@ -41,7 +41,7 @@ def ell2utm(lat,lon,a,e2,lcm):
 
     lam    = lon-lcm;
     lam    = lam-(lam>=pi)*(2*pi);
-  
+
     #print('\nZones\n');
     #print('%3d\n',Zone');
     #print('\nCentral Meridians\n');
@@ -62,28 +62,18 @@ def ell2utm(lat,lon,a,e2,lcm):
     a6     = 35/48*n^3;
     a8     = 315/512*n^4;
 
-     s     = a/(1+n)*(a0*lat-a2*sin(2*lat)+a4*sin(4*lat)-a6*sin(6*lat)+a8*sin(8*lat));
+    s     = a/(1+n)*(a0*lat-a2*math.sin(2*lat)+a4*math.sin(4*lat)-a6*math.sin(6*lat)+a8*math.sin(8*lat));
 
-E1=lam .* cos(lat);
-E2=lam.^3 .* cos(lat).^3/6 .* (1-t.^2+h.^2);
-E3=lam.^5 .* cos(lat).^5/120 .* ...
-    (5-18*t.^2+t.^4+14*h.^2-58*t.^2 .*h.^2+13*h.^4+...
-     4*h.^6-64*t.^2 .*h.^4-24*t.^2 .*h.^6);
-E4=lam.^7 .*cos(lat).^7/5040 .* ...
-    (61-479*t.^2+179*t.^4-t.^6);
-E=Eo + ko*RN.*(E1 + E2 + E3 + E4);
+    E1    = lam*math.cos(lat);
+    E2    = lam**3*math.cos(lat)**3/6*(1-t**2+h**2);
+    E3    = lam**5*math.cos(lat)**5/120*(5-18*t**2+t**4+14*h**2-58*t**2*h**2+13*h**4+4*h**6-64*t**2*h**4-24*t**2*h**6);
+    E4    = lam**7*math.cos(lat)**7/5040*(61-479*t**2+179*t**4-t**6);
+    E     = Eo + ko*RN*(E1 + E2 + E3 + E4);
 
-N1=lam.^2/2 .* sin(lat) .* cos(lat);
-N2=lam.^4/24 .* sin(lat) .* cos(lat).^3 .* ...
-    (5-t.^2+9*h.^2+4*h.^4);
-N3=lam.^6/720 .* sin(lat) .* cos(lat).^5 .* ...
-    (61-58*t.^2+t.^4+270*h.^2-...
-     330*t.^2 .*h.^2+445*h.^4+...
-     324*h.^6-680*t.^2 .*h.^4+...
-     88*h.^8-600*t.^2 .*h.^6-...
-     192*t.^2 .*h.^8);
-N4=lam.^8/40320 .* sin(lat) .* cos(lat).^7 .* ...
-   (1385-311*t.^2+543*t.^4-t.^6);
-N=No + ko*RN.*(s./RN + N1 + N2 + N3 + N4);
+    N1    = lam**2/2 * sin(lat) * math.cos(lat);
+    N2    = lam**4/24 * sin(lat) * math.cos(lat)**3 * (5-t**2+9*h**2+4*h**4);
+    N3    = lam**6/720 * sin(lat) * math.cos(lat)**5 *  (61-58*t**2+t**4+270*h**2- 330*t**2 *h**2+445*h**4+ 324*h**6-680*t**2 *h**4+ 88*h**8-600*t**2 *h**6- 192*t**2 *h**8);
+    N4    = lam**8/40320 * sin(lat) * math.cos(lat)**7 * (1385-311*t**2+543*t**4-t**6);
+    N     = No + ko*RN*(s/RN + N1 + N2 + N3 + N4);
 
-return (N,E,Zone)
+    return (N,E,Zone)
