@@ -25,5 +25,3 @@ def  ell2xyz(lat,lon,h,a,e2):
     z = (v*(1-e2)+h)*math.sin(lat);
 
     return(x,y,z)
-
-return(x,y,z)
