@@ -1,6 +1,4 @@
-# MatLab Geodetic Toolbox  
-## Version 2.95 (2011-02-19)  
-  
+# Geodetic Toolbox  
   
 ###### Angle Conversions  
 - [ ] deg2rad   - Degrees to radians  
