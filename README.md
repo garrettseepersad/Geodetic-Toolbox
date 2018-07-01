@@ -17,6 +17,7 @@
 - [x] xyz2ell   - Cartesian (x,y,z) to ellipsoidal (lat,long,ht) coordinates  
 - [x] xyz2ell2  - xyz2ell with Bowring height formula  
 - [x] xyz2ell3  - xyz2ell using complete Bowring version  
+- [x] ecef2lla  -
   
 ###### Coordinate Transformations  
 - [ ] refell    - Reference ellipsoid definition  
