@@ -37,9 +37,9 @@
 - [ ] dates     - Converts between different date formats  
 - [x] doy2jd    - Year and day of year to Julian date  
 - [x] gps2jd    - GPS week & seconds of week to Julian date  
-- [ ] jd2cal    - Julian date to calenar date  
-- [ ] jd2dow    - Julian date to day of week  
-- [ ] jd2doy    - Julian date to year & day of year  
+- [x] jd2cal    - Julian date to calendar date  
+- [x] jd2dow    - Julian date to day of week  
+- [x] jd2doy    - Julian date to year & day of year  
 - [ ] jd2gps    - Julian date to GPS week & seconds of week  
 - [ ] jd2mjd    - Julian date to Modified Julian date  
 - [ ] jd2yr     - Julian date to year & decimal year  

@@ -22,7 +22,22 @@
     <Compile Include="cal2jd.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="clg2cct.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="deg2rad.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dms2deg.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dms2rad.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="doy2jd.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ecef2lla.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="gps2jd.py">
@@ -32,6 +47,24 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ell2utm.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="jd2cal.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="jd2dow.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rad2deg.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rad2dms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rad2sec.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sec2rad.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="sph2xyz.py">
