@@ -1,16 +1,16 @@
 # Geodetic Toolbox  
   
 ###### Angle Conversions  
-- [ ] deg2rad   - Degrees to radians  
-- [ ] dms2deg   - Degrees,minutes,seconds to degrees  
-- [ ] dms2rad   - Degrees,minutes,seconds to radians  
-- [ ] rad2deg   - Radians to degrees  
-- [ ] rad2dms   - Radians to degrees,minutes,seconds  
-- [ ] rad2sec   - Radians to seconds  
-- [ ] sec2rad   - Seconds to radians  
+- [x] deg2rad   - Degrees to radians  
+- [x] dms2deg   - Degrees,minutes,seconds to degrees  
+- [x] dms2rad   - Degrees,minutes,seconds to radians  
+- [x] rad2deg   - Radians to degrees  
+- [x] rad2dms   - Radians to degrees,minutes,seconds  
+- [x] rad2sec   - Radians to seconds  
+- [x] sec2rad   - Seconds to radians  
   
 ###### Coordinate Conversions  
-- [ ] ell2utm   - Ellipsoidal (lat,long) to UTM (N,E) coordinates  
+- [x] ell2utm   - Ellipsoidal (lat,long) to UTM (N,E) coordinates  
 - [x] ell2xyz   - Ellipsoidal (lat,long) to Cartesian (x,y,z) coodinates  
 - [x] sph2xyz   - Shperical (az,va,dist) to Cartesian (x,y,z) coordinates  
 - [x] xyz2sph   - Cartesian (x,y,z) to spherical (az,va,dist) coordinates  
