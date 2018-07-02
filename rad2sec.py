@@ -1,4 +1,4 @@
-import math 
+import math
 
 def rad2sec(rad):
 #% RAD2SEC  Converts radians to seconds of arc.

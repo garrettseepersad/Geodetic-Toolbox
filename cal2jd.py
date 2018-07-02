@@ -1,4 +1,4 @@
-import numpy 
+import numpy
 
 def cal2jd(yr,mn,dy):
 #% CAL2JD  Converts calendar date to Julian date using algorithm
@@ -22,7 +22,7 @@ def cal2jd(yr,mn,dy):
     if (mn < 1) or (mn > 12):
         print('Invalid input month');
         return
-       
+
     if (dy < 1):
         if (mn == 2 & dy > 29) or ((mn in monthWithLessThan31Days) and dy > 30) or (dy > 31):
             print('Invalid input day');
@@ -34,7 +34,7 @@ def cal2jd(yr,mn,dy):
     else:
         y = yr - 1;
         m = mn + 12;
-    
+
     date1 =  4+31*(10+12*1582);  # Last day of Julian calendar (1582.10.04)
     date2 = 15+31*(10+12*1582);  # First day of Gregorian calendar (1582.10.15)
     date  = dy+31*(mn+12*yr);
@@ -46,7 +46,7 @@ def cal2jd(yr,mn,dy):
     else:
         print('Dates between October 5 & 15, 1582 do not exist');
         return;
- 
+
     if (y > 0):
         jd = numpy.fix(365.25*y) + numpy.fix(30.6001*(m+1)) + b + 1720996.5 + dy;
     else:

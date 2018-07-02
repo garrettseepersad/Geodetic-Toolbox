@@ -22,9 +22,6 @@
     <Compile Include="cal2jd.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="clg2cct.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="deg2rad.py">
       <SubType>Code</SubType>
     </Compile>
@@ -53,6 +50,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="jd2dow.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="jd2doy.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="rad2deg.py">

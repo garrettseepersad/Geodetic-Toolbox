@@ -17,7 +17,7 @@ def jd2cal(jd):
 #% Copyright (c) 2011, Michael R. Craymer
 #% All rights reserved.
 #% Email: mike@craymer.com
- 
+
     if jd < 0:
       print('Julian date must be greater than or equal to zero');
       return;
@@ -28,7 +28,7 @@ def jd2cal(jd):
     else:
         b = numpy.fix( (a-1867216.25) / 36524.25 );
         c = a + b - fix(b/4) + 1525;
-    
+
     d  = numpy.fix( (c-122.1)/365.25 );
     e  = numpy.fix(365.25*d);
     f  = numpy.fix( (c-e) / 30.6001 );

@@ -22,7 +22,7 @@ def ecef2lla(x,y,z):
     #%            size and shape. Outputs will have that same size and shape.
     #%        (4) Tested but no warranty; use at your own risk.
     #%        (5) Michael Craymer, April 2006
-    
+
     #% WGS84 ellipsoid constants
     a = 6378137;
     e = 8.1819190842622e-2;
@@ -46,6 +46,6 @@ def ecef2lla(x,y,z):
 
     k   = math.fabs(x)<1 and math.fabs(y)<1;
     alt = math.fabs(z)-b;
-    
+
     return (lat,lon,alt)
 

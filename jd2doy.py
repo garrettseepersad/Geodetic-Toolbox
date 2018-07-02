@@ -20,6 +20,6 @@ def jd2doy(jd):
         return;
 
     [yr,mn,dy] = jd2cal(jd);
-    doy = jd - cal2jd(yr,1,0);
+    doy        = jd - cal2jd(yr,1,0);
         
     return [doy,yr]

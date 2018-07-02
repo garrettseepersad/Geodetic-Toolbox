@@ -20,7 +20,7 @@ def dms2rad(dms):
     s   = dms[2];
     dec = math.fabs(d)+math.fabs(m)/60+math.fabs(s)/3600;
     rad = dec*math.pi/180;
-    
+
     if (d<0 or m<0 or s<0):
         rad = -rad;
 
