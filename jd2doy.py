@@ -6,10 +6,10 @@ def jd2doy(jd):
 #% . Non-vectorized version. See also CAL2JD, DOY2JD,
 #%   GPS2JD, JD2CAL, JD2DOW, JD2GPS, JD2YR, YR2JD.
 #% Version: 24 Apr 99
-#% Usage:   [doy,yr]=jd2doy(jd)
+#% Usage:   [doy,year]=jd2doy(jd)
 #% Input:   jd  - Julian date
 #% Output:  doy - day of year
-#%          yr  - year
+#%          year  - year
 
 #% Copyright (c) 2011, Michael R. Craymer
 #% All rights reserved.
@@ -19,7 +19,7 @@ def jd2doy(jd):
         print('Julian date must be greater than or equal to zero')
         return
 
-    [yr,mn,dy] = jd2cal(jd)
-    doy        = jd - cal2jd(yr,1,0)
-        
-    return [doy,yr]
+    [year,mn,dy] = jd2cal(jd)
+    doy        = jd - cal2jd(year,1,0)
+
+    return [doy,year]

@@ -1,14 +1,14 @@
 import numpy
 
-def cal2jd(yr, mn, dy):
+def cal2jd(year, mn, dy):
 #% CAL2JD  Converts calendar date to Julian date using algorithm
 #%   from "Practical Ephemeris Calculations" by Oliver Montenbruck
 #%   (Springer-Verlag, 1989). Uses astronomical year for B.C. dates
-#%   (2 BC = -1 yr). Non-vectorized version. See also DOY2JD, GPS2JD,
+#%   (2 BC = -1 year). Non-vectorized version. See also DOY2JD, GPS2JD,
 #%   JD2CAL, JD2DOW, JD2DOY, JD2GPS, JD2YR, YR2JD.
 #% Version: 1999-04-24
-#% Usage:   jd=cal2jd(yr,mn,dy)
-#% Input:   yr - calendar year (4-digit including century)
+#% Usage:   jd=cal2jd(year,mn,dy)
+#% Input:   year - calendar year (4-digit including century)
 #%          mn - calendar month
 #%          dy - calendar day (including factional day)
 #% Output:  jd - jJulian date
@@ -29,15 +29,15 @@ def cal2jd(yr, mn, dy):
             return
 
     if (mn > 2):
-        y = yr
+        y = year
         m = mn
     else:
-        y = yr - 1
+        y = year - 1
         m = mn + 12
 
     date1 =  4+31*(10+12*1582)  # Last day of Julian calendar (1582.10.04)
     date2 = 15+31*(10+12*1582)  # First day of Gregorian calendar (1582.10.15)
-    date  = dy+31*(mn+12*yr)
+    date  = dy+31*(mn+12*year)
 
     if (date <= date1):
         b = -2
