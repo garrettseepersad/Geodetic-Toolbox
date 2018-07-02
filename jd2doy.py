@@ -19,7 +19,7 @@ def jd2doy(jd):
         print('Julian date must be greater than or equal to zero')
         return
 
-    [year,month,dy] = jd2cal(jd)
+    [year,month,day] = jd2cal(jd)
     doy        = jd - cal2jd(year,1,0)
 
     return [doy,year]
