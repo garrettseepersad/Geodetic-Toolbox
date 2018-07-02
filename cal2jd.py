@@ -17,39 +17,43 @@ def cal2jd(year, month, day):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    monthWithLessThan31Days = [3, 5, 9, 11]
+    month_with_less_than_31_days = [3, 5, 9, 11]
+    jd = -1
 
     if (month < 1) or (month > 12):
         print('Invalid input month')
         return
 
-    if (day < 1):
-        if (month == 2 & day > 29) or ((month in monthWithLessThan31Days) and day > 30) or (day > 31):
+    if day < 1:
+        # disable for only one line
+        if ((month == 2 & day > 29) or
+                ((month in month_with_less_than_31_days) and day > 30) or
+                (day > 31)):
             print('Invalid input day')
-            return
+            return jd
 
-    if (month > 2):
+    if month > 2:
         y = year
         m = month
     else:
         y = year - 1
         m = month + 12
 
-    date1 =  4+31*(10+12*1582)  # Last day of Julian calendar (1582.10.04)
+    date1 = 4+31*(10+12*1582)  # Last day of Julian calendar (1582.10.04)
     date2 = 15+31*(10+12*1582)  # First day of Gregorian calendar (1582.10.15)
-    date  = day+31*(month+12*year)
+    date = day+31*(month+12*year)
 
-    if (date <= date1):
+    if date <= date1:
         b = -2
-    elif (date >= date2):
+    elif date >= date2:
         b = numpy.fix(y/400) - numpy.fix(y/100)
     else:
         print('Dates between October 5 & 15, 1582 do not exist')
         return
 
-    if (y > 0):
+    if y > 0:
         jd = numpy.fix(365.25*y) + numpy.fix(30.6001*(m+1)) + b + 1720996.5 + day
     else:
         jd = numpy.fix(365.25*y-0.75) + numpy.fix(30.6001*(m+1)) + b + 1720996.5 + day
 
-    return (jd)
+    return jd

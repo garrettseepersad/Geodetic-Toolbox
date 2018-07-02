@@ -1,3 +1,5 @@
+import math
+
 def deg2rad(deg):
 #% DEG2RAD  Converts decimal degrees to radians. Vectorized.
 #% Version: 18 Jan 96
@@ -9,4 +11,4 @@ def deg2rad(deg):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    return(deg*pi/180)
+    return deg*math.pi/180

@@ -1,6 +1,6 @@
 import math
 
-def ecef2lla(x,y,z):
+def ecef2lla(x, y, z):
 
     #% ECEF2LLA - convert earth-centered earth-fixed (ECEF)
     #%            cartesian coordinates to latitude, longitude,
