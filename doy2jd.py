@@ -14,5 +14,5 @@ def doy2jd(yr,doy):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    jd = cal2jd(yr,1,0) + doy;
+    jd = cal2jd(yr,1,0) + doy
     return (jd)

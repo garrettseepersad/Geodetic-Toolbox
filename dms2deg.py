@@ -15,12 +15,12 @@ def dms2deg(dms):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    d=dms[0];
-    m=dms[1];
-    s=dms[2];
-    deg=math.fabs(d)+math.fabs(m)/60+math.fabs(s)/3600;
+    d=dms[0]
+    m=dms[1]
+    s=dms[2]
+    deg=math.fabs(d)+math.fabs(m)/60+math.fabs(s)/3600
 
     if (d<0 or m<0 or s<0):
-        deg=-deg;
+        deg=-deg
 
     return(deg)

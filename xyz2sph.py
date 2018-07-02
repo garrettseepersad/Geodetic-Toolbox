@@ -17,11 +17,11 @@ def xyz2sph(x,y,z):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    d   = math.sqrt(x*x+y*y+z*z);
-    az  = math.atan2(y,x);
-    #az = math.atan(y./x);
-    #az = az+(x<0)*math.pi;     # 2nd & 3rd quad
-    #az = az+(az<0)*2*math.pi;  # 4th quad
-    va  = math.asin(z/d);
+    d   = math.sqrt(x*x+y*y+z*z)
+    az  = math.atan2(y,x)
+    #az = math.atan(y./x)
+    #az = az+(x<0)*math.pi     # 2nd & 3rd quad
+    #az = az+(az<0)*2*math.pi  # 4th quad
+    va  = math.asin(z/d)
 
     return(az,va,d)

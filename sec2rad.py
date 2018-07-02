@@ -11,7 +11,7 @@ def sec2rad(sec):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    rad=sec*math.pi/180/3600;
+    rad=sec*math.pi/180/3600
 
     return (rad)
 

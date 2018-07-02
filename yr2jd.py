@@ -16,10 +16,10 @@ def yr2jd(yr):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    iyr   = numpy.fix(yr);
-    jd0   = cal2jd(iyr,1,1);
-    days  = cal2jd(iyr+1,1,1) - jd0;
-    doy   = (yr-iyr)*days + 1;
-    jd    = doy2jd(iyr,doy);
+    iyr   = numpy.fix(yr)
+    jd0   = cal2jd(iyr,1,1)
+    days  = cal2jd(iyr+1,1,1) - jd0
+    doy   = (yr-iyr)*days + 1
+    jd    = doy2jd(iyr,doy)
 
     return (jd)

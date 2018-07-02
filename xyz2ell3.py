@@ -12,9 +12,9 @@ def xyz2ell3(X,Y,Z,a,b,e2):
 #% Input:   X \
 #%          Y  > vectors of cartesian coordinates in CT system (m)
 #%          Z /
-#%          a   - ref. ellipsoid major semi-axis (m); default GRS80
-#%          b   - ref. ellipsoid minor semi-axis (m); default GRS80
-#%          e2  - ref. ellipsoid eccentricity squared; default GRS80
+#%          a   - ref. ellipsoid major semi-axis (m) default GRS80
+#%          b   - ref. ellipsoid minor semi-axis (m) default GRS80
+#%          e2  - ref. ellipsoid eccentricity squared default GRS80
 #% Output:  lat - vector of ellipsoidal latitudes (radians)
 #%          lon - vector of ellipsoidal longitudes (radians)
 #%          h   - vector of ellipsoidal heights (m)
@@ -23,13 +23,13 @@ def xyz2ell3(X,Y,Z,a,b,e2):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    lon  = math.atan2(Y,X);
-    e    = e2*(a/b)^2;
-    p    = math.sqrt(X*X+Y*Y);
-    r    = math.sqrt(p*p+Z*Z);
-    u    = math.atan(b*Z*(1+e*b/r)/(a*p));
-    lat  = math.atan((Z+e*b*math.sin(u)^3)/(p-e2*a*math.cos(u)^3));
-    v    = a/math.sqrt(1-e2*math.sin(lat)^2);
-    h    = p*math.cos(lat)+Z*math.sin(lat)-a*a/v;
+    lon  = math.atan2(Y,X)
+    e    = e2*(a/b)^2
+    p    = math.sqrt(X*X+Y*Y)
+    r    = math.sqrt(p*p+Z*Z)
+    u    = math.atan(b*Z*(1+e*b/r)/(a*p))
+    lat  = math.atan((Z+e*b*math.sin(u)^3)/(p-e2*a*math.cos(u)^3))
+    v    = a/math.sqrt(1-e2*math.sin(lat)^2)
+    h    = p*math.cos(lat)+Z*math.sin(lat)-a*a/v
 
     return (lat,lon,h)

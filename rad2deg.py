@@ -9,5 +9,5 @@ def rad2deg(rad):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    deg=rad*180/pi;
+    deg=rad*180/pi
 

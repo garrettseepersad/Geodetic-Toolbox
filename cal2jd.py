@@ -1,6 +1,6 @@
 import numpy
 
-def cal2jd(yr,mn,dy):
+def cal2jd(yr, mn, dy):
 #% CAL2JD  Converts calendar date to Julian date using algorithm
 #%   from "Practical Ephemeris Calculations" by Oliver Montenbruck
 #%   (Springer-Verlag, 1989). Uses astronomical year for B.C. dates
@@ -17,39 +17,39 @@ def cal2jd(yr,mn,dy):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    monthWithLessThan31Days = [3,5,9,11];
+    monthWithLessThan31Days = [3, 5, 9, 11]
 
     if (mn < 1) or (mn > 12):
-        print('Invalid input month');
+        print('Invalid input month')
         return
 
     if (dy < 1):
         if (mn == 2 & dy > 29) or ((mn in monthWithLessThan31Days) and dy > 30) or (dy > 31):
-            print('Invalid input day');
+            print('Invalid input day')
             return
 
     if (mn > 2):
-        y = yr;
-        m = mn;
+        y = yr
+        m = mn
     else:
-        y = yr - 1;
-        m = mn + 12;
+        y = yr - 1
+        m = mn + 12
 
-    date1 =  4+31*(10+12*1582);  # Last day of Julian calendar (1582.10.04)
-    date2 = 15+31*(10+12*1582);  # First day of Gregorian calendar (1582.10.15)
-    date  = dy+31*(mn+12*yr);
+    date1 =  4+31*(10+12*1582)  # Last day of Julian calendar (1582.10.04)
+    date2 = 15+31*(10+12*1582)  # First day of Gregorian calendar (1582.10.15)
+    date  = dy+31*(mn+12*yr)
 
     if (date <= date1):
-        b = -2;
+        b = -2
     elif (date >= date2):
-        b = numpy.fix(y/400) - numpy.fix(y/100);
+        b = numpy.fix(y/400) - numpy.fix(y/100)
     else:
-        print('Dates between October 5 & 15, 1582 do not exist');
-        return;
+        print('Dates between October 5 & 15, 1582 do not exist')
+        return
 
     if (y > 0):
-        jd = numpy.fix(365.25*y) + numpy.fix(30.6001*(m+1)) + b + 1720996.5 + dy;
+        jd = numpy.fix(365.25*y) + numpy.fix(30.6001*(m+1)) + b + 1720996.5 + dy
     else:
-        jd = numpy.fix(365.25*y-0.75) + numpy.fix(30.6001*(m+1)) + b + 1720996.5 + dy;
+        jd = numpy.fix(365.25*y-0.75) + numpy.fix(30.6001*(m+1)) + b + 1720996.5 + dy
 
     return (jd)

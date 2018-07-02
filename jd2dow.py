@@ -18,10 +18,10 @@ def jd2dow(jd):
 #% Email: mike@craymer.com
 
     if (jd < 0):
-      print('Julian date must be greater than or equal to zero');
-      return;
+      print('Julian date must be greater than or equal to zero')
+      return
 
-    dow = math.floor(numpy.remainder(jd+1.5,7))+1;
+    dow = math.floor(numpy.remainder(jd+1.5,7))+1
 
     return(dow)
 

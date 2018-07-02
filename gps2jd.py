@@ -17,10 +17,10 @@ def gps2jd(gpsweek,sow,rollover):
 #% Email: mike@craymer.com
 
     if gpsweek <= 0 :
-      print('GPS week must be greater than or equal to zero');
-      return;
+      print('GPS week must be greater than or equal to zero')
+      return
 
-    jdgps = cal2jd(1980,1,6);             # beginning of GPS week numbering
-    nweek = gpsweek + 1024*rollover;      # account for rollovers every 1024 weeks
-    jd = jdgps + nweek*7 + sow/3600/24;
+    jdgps = cal2jd(1980,1,6)             # beginning of GPS week numbering
+    nweek = gpsweek + 1024*rollover      # account for rollovers every 1024 weeks
+    jd = jdgps + nweek*7 + sow/3600/24
     return (jd)

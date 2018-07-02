@@ -16,10 +16,10 @@ def jd2doy(jd):
 #% Email: mike@craymer.com
 
     if (jd < 0):
-        print('Julian date must be greater than or equal to zero');
-        return;
+        print('Julian date must be greater than or equal to zero')
+        return
 
-    [yr,mn,dy] = jd2cal(jd);
-    doy        = jd - cal2jd(yr,1,0);
+    [yr,mn,dy] = jd2cal(jd)
+    doy        = jd - cal2jd(yr,1,0)
         
     return [doy,yr]

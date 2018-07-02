@@ -14,30 +14,30 @@ def rad2dms(rad):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    d   = math.fabs(rad)*(180/math.pi);
-    id  = math.floor(d);
-    rm  = (d-id)*60;
-    im  = math.floor(rm);
-    s   = (rm-im)*60;
+    d   = math.fabs(rad)*(180/math.pi)
+    id  = math.floor(d)
+    rm  = (d-id)*60
+    im  = math.floor(rm)
+    s   = (rm-im)*60
 
     if rad<0:
       if id==0:
         if im==0:
-          s = -s;
+          s = -s
         else:
-          im = -im;
+          im = -im
       else:
-        id = -id;
+        id = -id
 
-    #ind=(rad<0 & id~=0);
-    #id(ind)=-id(ind);
+    #ind=(rad<0 & id~=0)
+    #id(ind)=-id(ind)
 
-    #ind=(rad<0 & id==0 & im~=0);
-    #im(ind)=-im(ind);
+    #ind=(rad<0 & id==0 & im~=0)
+    #im(ind)=-im(ind)
 
-    #ind=(rad<0 & id==0 & im==0);
-    #s(ind)=-s(ind);
+    #ind=(rad<0 & id==0 & im==0)
+    #s(ind)=-s(ind)
 
-    dms=[id, im, s];
+    dms=[id, im, s]
 
     return dms

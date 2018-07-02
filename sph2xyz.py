@@ -17,12 +17,12 @@ def sph2xyz(az,va,d):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    sinv = math.sin(va);
-    cosv = math.cos(va);
-    sina = math.sin(az);
-    cosa = math.cos(az);
-    x    = d*cosv*cosa;
-    y    = d*cosv*sina;
-    z    = d*sinv;
+    sinv = math.sin(va)
+    cosv = math.cos(va)
+    sina = math.sin(az)
+    cosa = math.cos(az)
+    x    = d*cosv*cosa
+    y    = d*cosv*sina
+    z    = d*sinv
 
     return(x,y,z)
