@@ -1,15 +1,15 @@
 import numpy
 
-def cal2jd(year, mn, dy):
+def cal2jd(year, month, dy):
 #% CAL2JD  Converts calendar date to Julian date using algorithm
 #%   from "Practical Ephemeris Calculations" by Oliver Montenbruck
 #%   (Springer-Verlag, 1989). Uses astronomical year for B.C. dates
 #%   (2 BC = -1 year). Non-vectorized version. See also DOY2JD, GPS2JD,
 #%   JD2CAL, JD2DOW, JD2DOY, JD2GPS, JD2YR, YR2JD.
 #% Version: 1999-04-24
-#% Usage:   jd=cal2jd(year,mn,dy)
+#% Usage:   jd=cal2jd(year,month,dy)
 #% Input:   year - calendar year (4-digit including century)
-#%          mn - calendar month
+#%          month - calendar month
 #%          dy - calendar day (including factional day)
 #% Output:  jd - jJulian date
 #
@@ -19,25 +19,25 @@ def cal2jd(year, mn, dy):
 
     monthWithLessThan31Days = [3, 5, 9, 11]
 
-    if (mn < 1) or (mn > 12):
+    if (month < 1) or (month > 12):
         print('Invalid input month')
         return
 
     if (dy < 1):
-        if (mn == 2 & dy > 29) or ((mn in monthWithLessThan31Days) and dy > 30) or (dy > 31):
+        if (month == 2 & dy > 29) or ((month in monthWithLessThan31Days) and dy > 30) or (dy > 31):
             print('Invalid input day')
             return
 
-    if (mn > 2):
+    if (month > 2):
         y = year
-        m = mn
+        m = month
     else:
         y = year - 1
-        m = mn + 12
+        m = month + 12
 
     date1 =  4+31*(10+12*1582)  # Last day of Julian calendar (1582.10.04)
     date2 = 15+31*(10+12*1582)  # First day of Gregorian calendar (1582.10.15)
-    date  = dy+31*(mn+12*year)
+    date  = dy+31*(month+12*year)
 
     if (date <= date1):
         b = -2

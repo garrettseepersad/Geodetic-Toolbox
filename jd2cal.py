@@ -8,10 +8,10 @@ def jd2cal(jd):
 #%   dates (2 BC = -1 year). Non-vectorized version. See also CAL2JD,
 #%   DOY2JD, GPS2JD, JD2DOW, JD2DOY, JD2GPS, JD2YR, YR2JD.
 #% Version: 24 Apr 99
-#% Usage:   [year, mn, dy]=jd2cal(jd)
+#% Usage:   [year, month, dy]=jd2cal(jd)
 #% Input:   jd - Julian date
 #% Output:  year - year of calendar date
-#%          mn - month of calendar date
+#%          month - month of calendar date
 #%          dy - day of calendar date (including decimal)
 
 #% Copyright (c) 2011, Michael R. Craymer
@@ -33,7 +33,7 @@ def jd2cal(jd):
     e  = numpy.fix(365.25*d)
     f  = numpy.fix( (c-e) / 30.6001 )
     dy = c - e - numpy.fix(30.6001*f) + numpy.remainder((jd+0.5),a)
-    mn = f - 1 - 12*numpy.fix(f/14)
-    year = d - 4715 - numpy.fix( (7+mn)/10 )
+    month = f - 1 - 12*numpy.fix(f/14)
+    year = d - 4715 - numpy.fix( (7+month)/10 )
 
-    return([year,mn,dy])
+    return([year,month,dy])
