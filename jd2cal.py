@@ -34,9 +34,9 @@ def jd2cal(jd):
 
     d = numpy.fix((c-122.1)/365.25)
     e = numpy.fix(365.25*d)
-    f = numpy.fix((c-e) / 30.6001)
+    f = numpy.fix((c-e)/30.6001)
     day = c - e - numpy.fix(30.6001*f) + numpy.remainder((jd+0.5), a)
-    month = f - 1 - 12*numpy.fix(f / 14)
-    year = d - 4715 - numpy.fix((7 + month) / 10)
+    month = f - 1 - 12*numpy.fix(f/14)
+    year = d - 4715 - numpy.fix((7+month)/10)
 
     return([year, month, day])

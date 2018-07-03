@@ -1,5 +1,4 @@
 import math
-import numpy
 
 def jd2dow(jd):
 #% JD2DOW  Converts Julian date to day of week (Sun=1,...,Sat=7)
@@ -17,11 +16,13 @@ def jd2dow(jd):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    if (jd < 0):
-      print('Julian date must be greater than or equal to zero')
-      return
+    dow = -1
+
+    if jd < 0:
+        print('Julian date must be greater than or equal to zero')
+        return dow
 
     dow = math.floor(numpy.remainder(jd+1.5,7))+1
 
-    return(dow)
+    return dow
 
