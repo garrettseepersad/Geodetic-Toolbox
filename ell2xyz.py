@@ -1,6 +1,6 @@
 import math
 
-def  ell2xyz(lat,lon,h,a,e2):
+def  ell2xyz(lat, lon, h, a, e2):
 #% ELL2XYZ  Converts ellipsoidal coordinates to cartesian.
 #%   Vectorized.
 #% Version: 2011-02-19
@@ -24,4 +24,4 @@ def  ell2xyz(lat,lon,h,a,e2):
     y = (v+h)*math.cos(lat)*math.sin(lon)
     z = (v*(1-e2)+h)*math.sin(lat)
 
-    return(x,y,z)
+    return(x, y, z)

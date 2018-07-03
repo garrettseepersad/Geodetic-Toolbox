@@ -1,6 +1,6 @@
 from cal2jd import cal2jd
 
-def gps2jd(gpsweek,sow,rollover):
+def gps2jd(gpsweek, sow, rollover):
 #% GPS2JD  Converts GPS week number (since 1980.01.06) and
 #%   seconds of week to Julian date. Non-vectorized version.
 #%   See also CAL2JD, DOY2JD, JD2CAL, JD2DOW, JD2DOY, JD2GPS,
@@ -16,11 +16,13 @@ def gps2jd(gpsweek,sow,rollover):
 #% All rights reserved.
 #% Email: mike@craymer.com
 
-    if gpsweek <= 0 :
-      print('GPS week must be greater than or equal to zero')
-      return
+    jd = -1
 
-    jdgps = cal2jd(1980,1,6)             # beginning of GPS week numbering
+    if gpsweek <= 0:
+        print('GPS week must be greater than or equal to zero')
+        return jd
+
+    jdgps = cal2jd(1980, 1, 6)             # beginning of GPS week numbering
     nweek = gpsweek + 1024*rollover      # account for rollovers every 1024 weeks
     jd = jdgps + nweek*7 + sow/3600/24
-    return (jd)
+    return jd

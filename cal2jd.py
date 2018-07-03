@@ -22,7 +22,7 @@ def cal2jd(year, month, day):
 
     if (month < 1) or (month > 12):
         print('Invalid input month')
-        return
+        return jd
 
     if day < 1:
         # disable for only one line
@@ -49,7 +49,7 @@ def cal2jd(year, month, day):
         b = numpy.fix(y/400) - numpy.fix(y/100)
     else:
         print('Dates between October 5 & 15, 1582 do not exist')
-        return
+        return jd
 
     if y > 0:
         jd = numpy.fix(365.25*y) + numpy.fix(30.6001*(m+1)) + b + 1720996.5 + day
