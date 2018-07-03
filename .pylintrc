@@ -302,7 +302,7 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=100
+max-line-length=150
 
 # Maximum number of lines in a module
 max-module-lines=1000
@@ -476,7 +476,7 @@ valid-metaclass-classmethod-first-arg=mcs
 [DESIGN]
 
 # Maximum number of arguments for function / method
-max-args=5
+max-args=7
 
 # Maximum number of attributes for a class (see R0902).
 max-attributes=7
@@ -488,7 +488,7 @@ max-bool-expr=5
 max-branches=12
 
 # Maximum number of locals for function / method body
-max-locals=15
+max-locals=50
 
 # Maximum number of parents for a class (see R0901).
 max-parents=7
